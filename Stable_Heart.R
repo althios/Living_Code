@@ -1,0 +1,10 @@
+k=5
+y=c(1:k,k:1)
+y=c(y,1:k,y)
+y=c(1:k,y,y,y,k:1)
+y=c(y,y,1:k,y,k:1,y,y)
+y=c(y,y,1:k,y,y,y,y,y,k:1,y,y)
+y=c(y,y,1:k,y,y,1:k,y,k:1,y,y,k:1,y,y)
+y=c(k:1,1:k,y,y,1:k,y,y,1:k,y,k:1,y,y,k:1,y,y,k:1,1:k)
+n=length(y)/4
+hist(sample(cumsum(y),n),breaks=n)
